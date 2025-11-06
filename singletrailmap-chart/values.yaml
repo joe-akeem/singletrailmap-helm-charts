@@ -1,0 +1,52 @@
+#brouter-stack:
+#  brouter:
+#    ingress:
+#      enabled: true
+#      className: cilium
+#  brouter-web:
+#    ingress:
+#      enabled: true
+#      className: cilium
+
+#brouter-web:
+#  ingress:
+#    enabled: true
+#    className: cilium
+#    annotations: {}
+#    hosts:
+#      - host: singletrail-map.ch
+#        paths:
+#          - path: /
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: brouter-stack-brouter-web
+#                port:
+#                  number: 80
+#      - host: www.singletrail-map.ch
+#        paths:
+#          - path: /
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: brouter-stack-brouter-web
+#                port:
+#                  number: 80
+#    tls: []
+#
+#brouter:
+#  ingress:
+#    enabled: true
+#    className: cilium
+#    annotations: {}
+#    hosts:
+#      - host: brouter.singletrail-map.ch
+#        paths:
+#          - path: /brouter
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: brouter-stack-brouter
+#                port:
+#                  number: 17777
+#    tls: []

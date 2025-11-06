@@ -1,0 +1,6 @@
+dependencies:
+- name: brouter-stack
+  repository: https://joe-akeem.github.io/brouter-helm-stack/
+  version: 0.3.4
+digest: sha256:ae8d2cf75aceb6bfedecbd77e0b5c0437661f958998ef340bace8074af2931b6
+generated: "2025-11-05T16:57:42.068901+01:00"

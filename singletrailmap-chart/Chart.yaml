@@ -1,0 +1,10 @@
+apiVersion: v2
+name: singletrailmap-chart
+description: Helm chart for deploying singletrail-map.ch
+type: application
+version: 0.1.0
+appVersion: '1.0'
+dependencies:
+  - name: brouter-stack
+    version: 0.3.4
+    repository: "https://joe-akeem.github.io/brouter-helm-stack/"

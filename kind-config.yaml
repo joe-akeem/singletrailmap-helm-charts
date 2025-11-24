@@ -1,0 +1,14 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: ./profiles
+        containerPath: /mnt/profiles
+    extraPortMappings:
+      - containerPort: 80
+        hostPort: 80
+        protocol: TCP
+      - containerPort: 17777
+        hostPort: 17777
+        protocol: TCP

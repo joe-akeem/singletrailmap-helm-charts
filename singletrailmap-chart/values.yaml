@@ -1,52 +1,31 @@
-#brouter-stack:
-#  brouter:
-#    ingress:
-#      enabled: true
-#      className: cilium
-#  brouter-web:
-#    ingress:
-#      enabled: true
-#      className: cilium
-
-#brouter-web:
-#  ingress:
-#    enabled: true
-#    className: cilium
-#    annotations: {}
-#    hosts:
-#      - host: singletrail-map.ch
-#        paths:
-#          - path: /
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: brouter-stack-brouter-web
-#                port:
-#                  number: 80
-#      - host: www.singletrail-map.ch
-#        paths:
-#          - path: /
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: brouter-stack-brouter-web
-#                port:
-#                  number: 80
-#    tls: []
+# Default values for singletrailmap umbrella chart.
+# This chart is intended to aggregate multiple services. For now it ships with
+# tileserver-gl as a dependency and we keep most defaults from that chart.
 #
-#brouter:
-#  ingress:
-#    enabled: true
-#    className: cilium
-#    annotations: {}
-#    hosts:
-#      - host: brouter.singletrail-map.ch
-#        paths:
-#          - path: /brouter
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: brouter-stack-brouter
-#                port:
-#                  number: 17777
-#    tls: []
+# You can override subchart values by nesting them under the subchart name.
+# Reference: the tileserver-gl chart README/values at
+# https://joe-akeem.github.io/tileserver-gl-helm-chart
+#
+# Example:
+# tileserver-gl:
+#   service:
+#     type: LoadBalancer
+#   persistence:
+#     enabled: true
+#     size: 10Gi
+#   resources:
+#     limits:
+#       cpu: "500m"
+#       memory: "1Gi"
+#     requests:
+#       cpu: "200m"
+#       memory: "512Mi"
+
+# Global values can be used by subcharts if they support them.
+# These are placeholders for future umbrella-wide configuration.
+global:
+  imagePullSecrets: []
+  commonLabels: {}
+
+# Subchart values
+tileserver-gl: {}

@@ -1,6 +1,6 @@
 dependencies:
-- name: brouter-stack
-  repository: https://joe-akeem.github.io/brouter-helm-stack/
-  version: 0.3.4
-digest: sha256:ae8d2cf75aceb6bfedecbd77e0b5c0437661f958998ef340bace8074af2931b6
-generated: "2025-11-05T16:57:42.068901+01:00"
+- name: tileserver-gl-helm-chart
+  repository: https://joe-akeem.github.io/tileserver-gl-helm-chart
+  version: 0.1.1
+digest: sha256:6cce32646f1dba4754018fc9823dcaf1fbc535b29767619ddbc2edce3cc9e093
+generated: "2026-01-30T14:08:58.94329+01:00"

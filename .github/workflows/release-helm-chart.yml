@@ -38,5 +38,6 @@ jobs:
           CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           pages_branch: gh-pages
-          charts_dir: .
-          charts_repo_url: https://joe-akeem.github.io/singletrailmap-helm-charts
+          charts_dir: singletrailmap-chart
+          # You can set a custom charts_repo_url if you use a custom domain:
+          # charts_repo_url: https://<your-domain>/helm

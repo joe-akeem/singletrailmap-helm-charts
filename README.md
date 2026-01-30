@@ -115,7 +115,7 @@ global:
 
 This repo ships a GitHub Actions workflow that packages and releases the chart to the `gh-pages` branch so it can be consumed as a Helm repo.
 
-- Workflow file: `.github/workflows/release-helm-gh-pages.yml`
+- Workflow file: `.github/workflows/release-helm-chart.yml`
 - Triggers: on push to `main`/`master` and manual `workflow_dispatch`
 - It uses `helm/chart-releaser-action` to:
   - Package new chart versions from `singletrailmap-chart/`

@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  singletrailmap-chart:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2026-01-30T14:32:43.990199131Z"
+    dependencies:
+    - name: tileserver-gl-helm-chart
+      repository: https://joe-akeem.github.io/tileserver-gl-helm-chart
+      version: 0.1.1
+    description: Helm chart for deploying singletrail-map
+    digest: b563c5e3ddd6c309403b14a400ae1a1fad665aec1fcdbdd341945d76f4353bde
+    name: singletrailmap-chart
+    type: application
+    urls:
+    - https://github.com/joe-akeem/singletrailmap-helm-charts/releases/download/singletrailmap-chart-0.1.5/singletrailmap-chart-0.1.5.tgz
+    version: 0.1.5
+generated: "2026-01-30T14:32:43.990218077Z"

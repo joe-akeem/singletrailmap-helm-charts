@@ -30,6 +30,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Build chart dependencies
+        run: |
+          helm dependency build singletrailmap-chart
+
       # Packages charts, creates GitHub Releases for new versions,
       # and updates/creates the index.yaml on the gh-pages branch.
       - name: Run chart-releaser
@@ -38,6 +42,6 @@ jobs:
           CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           pages_branch: gh-pages
-          charts_dir: singletrailmap-chart
+          charts_dir: .
           # You can set a custom charts_repo_url if you use a custom domain:
           # charts_repo_url: https://<your-domain>/helm

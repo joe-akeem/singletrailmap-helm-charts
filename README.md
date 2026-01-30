@@ -111,3 +111,34 @@ global:
 - Confirm the Kubernetes service type and ingress settings according to your cluster environment (e.g., LoadBalancer
   availability on your cloud or MetalLB on kind/bare metal).
 
+## Publish to GitHub Pages (Helm chart repository)
+
+This repo ships a GitHub Actions workflow that packages and releases the chart to the `gh-pages` branch so it can be consumed as a Helm repo.
+
+- Workflow file: `.github/workflows/release-helm-gh-pages.yml`
+- Triggers: on push to `main`/`master` and manual `workflow_dispatch`
+- It uses `helm/chart-releaser-action` to:
+  - Package new chart versions from `singletrailmap-chart/`
+  - Create GitHub Releases for new versions
+  - Update (or create) `index.yaml` on the `gh-pages` branch
+
+One-time setup (in GitHub UI):
+- Settings → Pages → Set "Build and deployment" to deploy from Branch: `gh-pages` (root) and save.
+
+How to publish a new version:
+1) Bump the chart version in `singletrailmap-chart/Chart.yaml` (the `version:` field). Commit and push to `main`.
+2) The workflow will run and publish the new chart artifact and update the `gh-pages` index.
+
+How to consume this chart from your cluster:
+```
+helm repo add singletrailmap https://joe-akeem.github.io/singletrailmap-helm-charts
+helm repo update
+helm search repo singletrailmap
+# Install a released version from the repo
+helm install <release-name> singletrailmap/singletrailmap-chart --version <x.y.z> -n <namespace> --create-namespace
+```
+
+Notes:
+- The workflow uses the built-in `GITHUB_TOKEN` (`CR_TOKEN`) and pushes to `gh-pages` with `contents: write` permission.
+- If you later use a custom domain for Pages, set `charts_repo_url` in the workflow accordingly.
+

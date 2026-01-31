@@ -135,7 +135,7 @@ helm repo add singletrailmap https://joe-akeem.github.io/singletrailmap-helm-cha
 helm repo update
 helm search repo singletrailmap
 # Install a released version from the repo
-helm install <release-name> singletrailmap/singletrailmap-chart --version <x.y.z> -n <namespace> --create-namespace
+helm install <release-name> singletrailmap/singletrailmap --version <x.y.z> -n <namespace> --create-namespace
 ```
 
 Notes:

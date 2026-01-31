@@ -1,6 +1,6 @@
 dependencies:
 - name: tileserver-gl
   repository: https://joe-akeem.github.io/tileserver-gl-helm-chart
-  version: 0.1.2
-digest: sha256:8fa40a94414b9dca3f65729e40b8ed2eceabd28955d762a15a0f97cee81f2d6b
-generated: "2026-01-30T19:40:32.724818+01:00"
+  version: 0.1.3
+digest: sha256:7c52bb8c6d4e667bbc96aea2e8e63073f03dfb13d9d19fd8e324a5c7de978b78
+generated: "2026-01-31T06:10:28.634993+01:00"

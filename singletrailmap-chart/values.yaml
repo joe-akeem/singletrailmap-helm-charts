@@ -29,3 +29,5 @@ global:
 
 # Subchart values
 tileserver-gl: {}
+
+brouter: {}

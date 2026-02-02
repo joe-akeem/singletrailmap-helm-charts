@@ -34,6 +34,7 @@ jobs:
         run: |
           helm repo add tileserver-gl-helm-chart https://joe-akeem.github.io/tileserver-gl-helm-chart
           helm repo add brouter https://joe-akeem.github.io/brouter-helm-chart
+          helm repo add brouter-web https://joe-akeem.github.io/brouter-web-helm-chart
           helm repo update
 
       - name: Build chart dependencies

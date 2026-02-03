@@ -7,6 +7,6 @@ dependencies:
   version: 0.1.2
 - name: brouter-web
   repository: https://joe-akeem.github.io/brouter-web-helm-chart
-  version: 0.1.1
-digest: sha256:95d722afcf0e74395d9868bb3bb8010ee77205016a6cd16714904cd0b0445d18
-generated: "2026-02-02T16:50:51.934242+01:00"
+  version: 0.3.0
+digest: sha256:c0663e7c3fd9eed6847cf50a8de2b84db9cce9a1c78c10b80a3468bee112bdd4
+generated: "2026-02-03T11:04:28.668803+01:00"

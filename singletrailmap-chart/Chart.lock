@@ -1,12 +1,12 @@
 dependencies:
 - name: tileserver-gl
   repository: https://joe-akeem.github.io/tileserver-gl-helm-chart
-  version: 0.1.3
+  version: 0.2.0
 - name: brouter
   repository: https://joe-akeem.github.io/brouter-helm-chart
   version: 0.2.0
 - name: brouter-web
   repository: https://joe-akeem.github.io/brouter-web-helm-chart
   version: 0.3.0
-digest: sha256:623041bc78689f2185c03b0330d21aa668d2472ee31dd830c86b204125ab01fd
-generated: "2026-02-04T09:11:33.085785+01:00"
+digest: sha256:a65183d207a39d51bdbf8d80137d4f82e893fe7662d379abc87ee66475db0eed
+generated: "2026-02-06T19:14:47.396122+01:00"

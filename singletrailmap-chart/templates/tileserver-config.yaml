@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tileserver-config
+data:
+  config.json: |
+    {
+      "options": {
+        "paths": {
+          "root": "",
+          "styles": "/styles",
+          "mbtiles": "/data"
+        },
+        "formatQuality": {
+          "jpeg": 80,
+          "webp": 90
+        },
+        "maxScaleFactor": 3,
+        "maxSize": 2048,
+        "pbfAlias": "pbf",
+        "serveAllFonts": false,
+        "serveAllStyles": false,
+        "serveStaticMaps": true,
+        "tileMargin": 0
+      },
+      "styles": {
+        "mtb": {
+          "style": "mtb.json",
+          "tilejson": {
+            "type": "overlay"
+          }
+        },
+        "mtb_potential": {
+          "style": "mtb-potential.json",
+          "tilejson": {
+            "type": "overlay"
+          }
+        },
+        "singletrailmap": {
+          "style": "singletrailmap.json",
+          "tilejson": {
+            "type": "overlay"
+          }
+        }
+      }
+    }

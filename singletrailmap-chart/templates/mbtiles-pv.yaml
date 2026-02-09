@@ -1,0 +1,16 @@
+{{- if eq .Values.environment "live" }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mbtiles-pv
+spec:
+  capacity:
+    storage: {{ .Values.persistence.nfs.size }}
+  accessModes:
+    - ReadOnlyMany
+  nfs:
+    server: {{ .Values.persistence.nfs.server }}
+    path: {{ .Values.persistence.nfs.path }}
+  claimRef:
+    name: mbtiles-pvc
+{{- end }}

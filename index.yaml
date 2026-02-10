@@ -3,6 +3,26 @@ entries:
   singletrailmap:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2026-02-10T20:35:03.852286979Z"
+    dependencies:
+    - name: tileserver-gl
+      repository: https://joe-akeem.github.io/tileserver-gl-helm-chart
+      version: 0.2.0
+    - name: brouter
+      repository: https://joe-akeem.github.io/brouter-helm-chart
+      version: 0.2.0
+    - name: brouter-web
+      repository: https://joe-akeem.github.io/brouter-web-helm-chart
+      version: 0.3.0
+    description: Helm chart for deploying singletrail-map
+    digest: 16ce54af708e3e9c28f28132e5fa641e9216c099b201c142c7bffe27ae62af5c
+    name: singletrailmap
+    type: application
+    urls:
+    - https://github.com/joe-akeem/singletrailmap-helm-charts/releases/download/singletrailmap-0.8.2/singletrailmap-0.8.2.tgz
+    version: 0.8.2
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2026-02-10T14:45:31.83711374Z"
     dependencies:
     - name: tileserver-gl
@@ -338,4 +358,4 @@ entries:
     urls:
     - https://github.com/joe-akeem/singletrailmap-helm-charts/releases/download/singletrailmap-chart-0.1.5/singletrailmap-chart-0.1.5.tgz
     version: 0.1.5
-generated: "2026-02-10T14:45:31.837237827Z"
+generated: "2026-02-10T20:35:03.852430466Z"

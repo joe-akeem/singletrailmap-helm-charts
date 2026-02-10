@@ -28,7 +28,7 @@ global:
   commonLabels: {}
 
 persistence:
-  storage: 1Gi
+  storage: 2Gi
   accessMode: ReadWriteOnce
   storageType: "hostPath"
   hostPath:

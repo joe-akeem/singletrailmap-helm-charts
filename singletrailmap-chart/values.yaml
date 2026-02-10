@@ -28,6 +28,13 @@ global:
   commonLabels: {}
 
 # Subchart values
-tileserver-gl: {}
+tileserver-gl:
+  volumeMounts:
+    - name: mbtiles
+      mountPath: /data
+  volumes:
+    - name: mbtiles
+      persistentVolumeClaim:
+        claimName: mbtiles-pvc
 
 brouter: {}

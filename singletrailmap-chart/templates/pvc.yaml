@@ -4,8 +4,9 @@ metadata:
   name: mbtiles-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadOnlyMany
   resources:
     requests:
-      storage: 5Gi
+      storage: 1Gi
   storageClassName: local-path
+

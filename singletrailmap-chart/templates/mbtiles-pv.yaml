@@ -5,10 +5,16 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   capacity:
-    storage: 1Gi
+    storage: {{ .Values.persistence.storage }}
   accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
+    - {{ .Values.persistence.accessMode }}
+  persistentVolumeReclaimPolicy: {{ .Values.persistence.reclaimPolicy }}
+  {{- if eq .Values.persistence.storageType "hostPath" }}
   hostPath:
-    path: /var/lib/rancher/k3s/storage  # This maps to ~/.k3d/singletrail/data/ via k3d
-    type: Directory
+    path: {{ .Values.persistence.hostPath.path }}
+    type: {{ .Values.persistence.hostPath.type }}
+  {{- else if eq .Values.persistence.storageType "nfs" }}
+  nfs:
+    server: {{ .Values.persistence.nfs.server }}
+    path: {{ .Values.persistence.nfs.path }}
+  {{- end }}

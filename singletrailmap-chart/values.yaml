@@ -27,6 +27,14 @@ global:
   imagePullSecrets: []
   commonLabels: {}
 
+persistence:
+  storage: 1GP
+  accessMode: ReadWriteOnce
+  storageType: "hostPath"
+  hostPath:
+    path: /var/lib/rancher/k3s/storage
+    type: Directory
+
 # Subchart values
 tileserver-gl:
   ingress:

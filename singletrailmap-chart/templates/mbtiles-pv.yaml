@@ -1,16 +1,14 @@
-{{- if eq .Values.environment "live" }}
 apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: mbtiles-pv
+  namespace: default
 spec:
   capacity:
-    storage: {{ .Values.persistence.nfs.size }}
+    storage: 1Gi
   accessModes:
-    - ReadOnlyMany
-  nfs:
-    server: {{ .Values.persistence.nfs.server }}
-    path: {{ .Values.persistence.nfs.path }}
-  claimRef:
-    name: mbtiles-pvc
-{{- end }}
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /var/lib/rancher/k3s/storage  # This maps to ~/.k3d/singletrail/data/ via k3d
+    type: Directory

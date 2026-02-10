@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mtb-potential-style
-  namespace: default
+  namespace: {{ .Release.Namespace }}
 data:
   mtb-potential.json: |
     {

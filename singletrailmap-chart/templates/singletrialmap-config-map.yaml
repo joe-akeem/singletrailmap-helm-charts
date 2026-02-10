@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: singletrailmap-style
-  namespace: default
+  namespace: {{ .Release.Namespace }}
 data:
   singletrailmap.json: |
     {

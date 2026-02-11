@@ -27,6 +27,8 @@ global:
   imagePullSecrets: []
   commonLabels: {}
 
+debug: false
+
 persistence:
   storage: 2Gi
   accessMode: ReadWriteOnce

@@ -61,7 +61,12 @@ tileserver-gl:
   initContainers:
     - name: copy-config
       image: busybox:latest
-      command: [ 'sh', '-c', 'cp /config/config.json /data/' ]
+      command:
+        - sh
+        - -c
+        - |
+          rm /data/config.json
+          cp /config/config.json /data/
       volumeMounts:
         - name: config
           mountPath: /config

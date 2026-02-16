@@ -8,5 +8,8 @@ dependencies:
 - name: brouter-web
   repository: https://joe-akeem.github.io/brouter-web-helm-chart
   version: 0.3.0
-digest: sha256:a65183d207a39d51bdbf8d80137d4f82e893fe7662d379abc87ee66475db0eed
-generated: "2026-02-06T19:14:47.396122+01:00"
+- name: planetiler-openmaptiles
+  repository: https://joe-akeem.github.io/planetiler-openmaptiles-helm-chart
+  version: 0.1.0
+digest: sha256:12d27ebd62358fdbc4949a7c309ce1250f21d0738b3a903c2441fc720676a08a
+generated: "2026-02-16T21:56:11.103294+01:00"

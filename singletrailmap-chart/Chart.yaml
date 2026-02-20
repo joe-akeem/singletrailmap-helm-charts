@@ -2,7 +2,7 @@ apiVersion: v2
 name: singletrailmap
 description: Helm chart for deploying singletrail-map
 type: application
-version: 0.10.0
+version: 0.11.0
 appVersion: '1.0'
 dependencies:
   - name: tileserver-gl
@@ -15,5 +15,5 @@ dependencies:
     version: 0.3.0
     repository: "https://joe-akeem.github.io/brouter-web-helm-chart"
   - name: planetiler-openmaptiles
-    version: 0.1.0
+    version: 0.6.0
     repository: "https://joe-akeem.github.io/planetiler-openmaptiles-helm-chart"

@@ -1,33 +1,10 @@
-# Default values for singletrailmap umbrella chart.
-# This chart is intended to aggregate multiple services. For now it ships with
-# tileserver-gl as a dependency and we keep most defaults from that chart.
-#
-# You can override subchart values by nesting them under the subchart name.
-# Reference: the tileserver-gl chart README/values at
-# https://joe-akeem.github.io/tileserver-gl-helm-chart
-#
-# Example:
-# tileserver-gl:
-#   service:
-#     type: LoadBalancer
-#   persistence:
-#     enabled: true
-#     size: 10Gi
-#   resources:
-#     limits:
-#       cpu: "500m"
-#       memory: "1Gi"
-#     requests:
-#       cpu: "200m"
-#       memory: "512Mi"
-
 # Global values can be used by subcharts if they support them.
 # These are placeholders for future umbrella-wide configuration.
 global:
   imagePullSecrets: []
   commonLabels: {}
 
-debug: false
+debug: true
 
 persistence:
   storage: 2Gi
@@ -38,6 +15,17 @@ persistence:
     type: Directory
 
 # Subchart values
+planetiler-openmaptiles:
+  persistence:
+    enabled: true
+    existingClaim: "mbtiles-pvc"
+    mountPath: /data
+  area: switzerland
+  args:
+    - --force
+    - --download
+    - --output=/data/tiles.mbtiles
+
 tileserver-gl:
   ingress:
     enabled: true

@@ -10,6 +10,6 @@ dependencies:
   version: 0.3.0
 - name: planetiler-openmaptiles
   repository: https://joe-akeem.github.io/planetiler-openmaptiles-helm-chart
-  version: 0.1.0
-digest: sha256:12d27ebd62358fdbc4949a7c309ce1250f21d0738b3a903c2441fc720676a08a
-generated: "2026-02-16T21:56:11.103294+01:00"
+  version: 0.6.0
+digest: sha256:a825b905bd732f658914d56d6aadded7be03a02a7bea4602a37abebc789f4a50
+generated: "2026-02-20T22:13:50.129781+01:00"
